@@ -20,6 +20,8 @@ form div {
   display: inline-block;
 }
 
+/* navbar */
+
 .description {
   flex: auto;
   text-align: center;
