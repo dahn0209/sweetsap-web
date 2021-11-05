@@ -6,57 +6,37 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <img />
-    <h1 id="description">Restaurant & Bar</h1>
+    <img src="./logoImage.jpeg" />
+    <Link to="/">
+      <h1 className="description">Restaurant & Bar</h1>
+    </Link>
     <nav>
       {isLoggedIn ? (
-        <div>
+        <div className="options">
           {/* The navbar will show these links after you log in */}
-          <Link class="options" to="/home">
-            Home
-          </Link>
-          <Link class="options" to="/hours-location">
-            Hours and Location
-          </Link>
-          <Link class="options" to="/menu">
-            Menu
-          </Link>
-          <Link class="options" to="/private-events">
-            Private Events
-          </Link>
-          <Link class="options" to="/happenings">
+          <Link to="/home">Home</Link>
+          <Link to="/hours-location">Hours and Location</Link>
+          <Link to="/menu">Menu</Link>
+          <Link to="/private-events">Private Events</Link>
+          <Link className="options" to="/happenings">
             Happening
           </Link>
-          <Link class="options" to="/contact-us">
-            Contact Us
-          </Link>
+          <Link to="/contact-us">Contact Us</Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
         </div>
       ) : (
-        <div>
+        <div className="options">
           {/* The navbar will show these links before you log in */}
           {/* <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link> */}
-          <Link class="options" to="/">
-            Home
-          </Link>
-          <Link class="options" to="/hours-location">
-            Hours and Location
-          </Link>
-          <Link class="options" to="/menu">
-            Menu
-          </Link>
-          <Link class="options" to="/private-events">
-            Private Events
-          </Link>
-          <Link class="options" to="/happenings">
-            Happening
-          </Link>
-          <Link class="options" to="/contact-us">
-            Contact Us
-          </Link>
+          <Link to="/">Home</Link>
+          <Link to="/hours-location">Hours and Location</Link>
+          <Link to="/menu">Menu</Link>
+          <Link to="/private-events">Private Events</Link>
+          <Link to="/happenings">Happening</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </div>
       )}
     </nav>

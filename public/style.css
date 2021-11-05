@@ -19,3 +19,13 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.description {
+  flex: auto;
+  text-align: center;
+}
+
+.options {
+  flex: auto;
+  text-align: center;
+}
